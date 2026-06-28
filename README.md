@@ -2,7 +2,7 @@
 
 Personal Codex skills I use day to day.
 
-This repo is a working library, not a polished package registry. Each folder is one skill: a small set of instructions, prompts, scripts, or assets that make Codex better at a workflow I repeat often.
+This repo is a working library, not a polished package registry. Each folder is one skill: a small set of instructions, prompts, scripts, or assets that make my agents better.
 
 ## Skills
 
