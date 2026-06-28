@@ -1,0 +1,4 @@
+interface:
+  display_name: "Goalstorm"
+  short_description: "Parallel agents with explicit goals"
+  default_prompt: "Use $goalstorm to implement this with a clear goal and parallel agents."
