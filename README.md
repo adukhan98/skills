@@ -8,6 +8,7 @@ This repo is a working library, not a polished package registry. Each folder is 
 
 | Skill | What it does |
 | --- | --- |
+| [`copywriting`](./copywriting) | Writes social, product, email, and repo copy in Adnaan's voice. |
 | [`goalstorm`](./goalstorm) | Runs implementation work through an explicit goal, parallel agent delegation, synthesis, and verification. |
 
 ## Structure
@@ -34,7 +35,7 @@ Copy a skill into your local Codex skills directory:
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R goalstorm "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R copywriting "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
 Then restart Codex if the skill list does not refresh automatically.
@@ -46,7 +47,7 @@ Skills should stay short. Remove no-op instructions, duplicated guidance, and ge
 Before committing a skill update, check that the frontmatter still parses:
 
 ```bash
-ruby -ryaml -e 's=File.read(ARGV[0]); y=s.match(/\A---\n(.*?)\n---\n/m) or abort("missing frontmatter"); YAML.safe_load(y[1]); puts "ok"' goalstorm/SKILL.md
+ruby -ryaml -e 's=File.read(ARGV[0]); y=s.match(/\A---\n(.*?)\n---\n/m) or abort("missing frontmatter"); YAML.safe_load(y[1]); puts "ok"' copywriting/SKILL.md
 ```
 
 ## License

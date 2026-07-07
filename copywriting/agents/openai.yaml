@@ -1,0 +1,4 @@
+interface:
+  display_name: "Copywriting"
+  short_description: "Write copy in Adnaan's voice"
+  default_prompt: "Use $copywriting to write this in Adnaan's voice."
