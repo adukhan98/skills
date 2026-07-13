@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flow"
+  short_description: "Drive ideas through a verified build"
+  default_prompt: "Use $flow to take this idea from ambiguity to a verified implementation."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Handoff"
+  short_description: "Capture exact state for the next Codex task"
+  default_prompt: "Use $handoff to capture the current state for a fresh Codex task."
