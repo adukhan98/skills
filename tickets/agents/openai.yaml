@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tickets"
+  short_description: "Split specs into dependency-aware slices"
+  default_prompt: "Use $tickets to split this spec into dependency-aware vertical slices."

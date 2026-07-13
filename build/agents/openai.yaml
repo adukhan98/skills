@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build"
+  short_description: "Implement and verify defined work end to end"
+  default_prompt: "Use $build to implement and verify this defined piece of work."
