@@ -1,4 +1,4 @@
 interface:
   display_name: "Flow"
-  short_description: "Drive ideas through a verified build"
-  default_prompt: "Use $flow to take this idea from ambiguity to a verified implementation."
+  short_description: "Run the five-phase build workflow"
+  default_prompt: "Use $flow to take this idea through shape, spec, tickets, build, and review."

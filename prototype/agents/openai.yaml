@@ -1,4 +1,4 @@
 interface:
   display_name: "Prototype"
-  short_description: "Answer questions with runnable prototypes"
+  short_description: "Test one decision with a prototype"
   default_prompt: "Use $prototype to answer this design question with a runnable experiment."

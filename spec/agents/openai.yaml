@@ -1,4 +1,4 @@
 interface:
   display_name: "Spec"
-  short_description: "Turn decisions into a buildable spec"
+  short_description: "Turn a confirmed brief into a spec"
   default_prompt: "Use $spec to turn our settled decisions into an implementation-ready spec."

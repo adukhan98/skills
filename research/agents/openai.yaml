@@ -1,4 +1,4 @@
 interface:
   display_name: "Research"
-  short_description: "Research decisions from primary sources"
+  short_description: "Research one active workflow decision"
   default_prompt: "Use $research to investigate this question using primary sources."

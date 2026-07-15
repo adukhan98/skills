@@ -1,11 +1,11 @@
 ---
 name: tdd
-description: Implement behavior test-first with a red-green-refactor loop at a stable observable seam. Use when the user requests TDD, test-first development, a regression test before a fix, or a build task selects an automated behavioral feedback loop.
+description: Support the build phase by implementing behavior test-first with a red-green-refactor loop at a stable observable seam. Use when the user requests TDD, wants a regression test before a fix, or a build ticket has a valuable automated behavioral feedback loop.
 ---
 
 # TDD
 
-Work one coherent behavior slice at a time.
+This is an implementation technique inside `$build`, not a separate workflow phase. Work one coherent behavior slice at a time.
 
 ## Loop
 

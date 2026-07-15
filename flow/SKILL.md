@@ -1,39 +1,46 @@
 ---
 name: flow
-description: Drive an end-to-end build from a fuzzy idea to a verified implementation. Use when the user wants Codex to take work through ideation, research, prototyping, specification, decomposition, and implementation, or wants to know which build skill should run next.
+description: Run or resume the standard five-phase workflow from a vague idea to reviewed, verified code. Use when the user wants Codex to own the whole process, continue from an existing brief, spec, ticket set, or implementation, or decide which core phase comes next.
 ---
 
 # Flow
 
-Start from the latest trustworthy artifact or working state. Do not restart discovery when a usable brief, map, spec, ticket set, handoff, or implementation already exists.
+Use one simple sequence:
 
-## Route the work
+1. **Brainstorm** - `$shape` interviews the user and produces a confirmed brief.
+2. **Spec** - `$spec` turns the brief into the canonical build contract.
+3. **Tickets** - `$tickets` converts the spec into ready implementation issues.
+4. **Build** - `$build` implements the tickets and uses `$tdd` when useful.
+5. **Review** - `$build` performs spec and code review, fixes findings, and verifies the result.
 
-Inspect the conversation, repository instructions, relevant documents, current plan, and git state. Select the first unmet gate:
+`$flow` is the wrapper around these phases, not another phase.
 
-- **Unclear outcome or unresolved product decisions** -> use `$shape`.
-- **A destination exists but the route contains more uncertainty than one focused task can resolve** -> use `$map`.
-- **A decision depends on external or version-sensitive facts** -> use `$research`, then feed the findings back into the active brief, map, or spec.
-- **A decision needs something runnable or visible** -> use `$prototype`, then record its verdict in the active brief, map, or spec.
-- **The behavior is settled but not captured canonically** -> use `$spec`.
-- **The spec needs multiple bounded delivery slices** -> use `$tickets`. Send a small, coherent change directly to `$build`.
-- **A slice is defined** -> use `$build`; apply `$tdd` inside it when an automated behavioral loop is valuable.
-- **The task must pause, fork, or move to a fresh context** -> use `$handoff`.
+## Procedure
 
-## Operating rules
+1. Inspect the conversation, repository instructions, existing artifacts, current implementation, plan, and git state.
+2. Resume from the first incomplete core phase. Never restart a phase whose trustworthy artifact already exists.
+3. In the full workflow, route every ready spec through `$tickets`. A small change may produce a single ticket.
+4. Work ready tickets with `$build`. Use `$tdd` inside the build when a stable automated behavior seam exists.
+5. After implementation, require the review pass in `$build`. A green test run alone is not completion.
+6. If review finds an implementation defect, return to Build. If it finds a missing or changed requirement, return to Shape or Spec, update affected tickets, then resume.
+7. Continue through safe, reversible work when the user asked for an end-to-end result. Pause only for a material user-owned decision, a real blocker, or authority for an external mutation.
 
-1. Run only the stages the work needs. A clear bug fix or one-slice feature may enter at `$build`, which can apply `$tdd` internally.
-2. Distinguish decision work from delivery work. `$map` clears uncertainty; `$tickets` decomposes settled implementation.
-3. Treat research and prototypes as loops, not milestones: question -> evidence -> decision update.
-4. If implementation exposes an unresolved product or architecture decision, stop at a safe boundary, update the governing artifact, repair affected tickets, then resume.
-5. Continue through safe, reversible stages when the user asked for an end-to-end result. Pause only for a material user-owned choice, a genuine blocker, or authority for an external state change.
-6. Use parallel agents for independent lanes with disjoint ownership. Keep synthesis, integration, and final verification in the parent task.
-7. Update an existing canonical artifact instead of creating a competing copy. Reference evidence by path or URL.
+## Optional helpers
+
+Use these only when the active phase needs them:
+
+- `$research` for current external facts.
+- `$prototype` for a decision that must be seen or run.
+- `$map` for unusually large uncertainty that cannot fit one shaping pass.
+- `$tdd` for a test-first loop inside the build phase.
+- `$handoff` when work must pause or move to another task.
+
+Helpers return their evidence to the active core phase. They do not add mandatory phases.
+
+## Direct entry
+
+A request that already includes a trustworthy spec, ticket, or implementation may enter at the corresponding phase. Preserve the same downstream rule: implementation is followed by review and verification.
 
 ## Completion
 
-Finish with one of these outcomes:
-
-- a verified implementation with the checks and review evidence reported;
-- a decision-complete artifact and the exact next gate;
-- a handoff that names the pause or transfer reason, the blocker or `none`, and the first action for continuation.
+Finish only with a reviewed, verified implementation, or stop explicitly as blocked with the exact unresolved decision, dependency, or authority required. Report which phases were reused, completed, or revisited.

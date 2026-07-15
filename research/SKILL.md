@@ -1,6 +1,6 @@
 ---
 name: research
-description: Investigate a build or design decision using current high-trust sources and preserve the evidence. Use when a workflow depends on external documentation, APIs, standards, source code, papers, version-sensitive facts, comparisons, or delegated reading before a decision can be made.
+description: Support an active workflow phase by investigating one decision with current, high-trust sources. Use when shaping, specification, or implementation depends on external documentation, APIs, standards, source code, papers, comparisons, or other version-sensitive facts.
 ---
 
 # Research

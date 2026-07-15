@@ -1,4 +1,4 @@
 interface:
   display_name: "Build"
-  short_description: "Implement and verify defined work end to end"
-  default_prompt: "Use $build to implement and verify this defined piece of work."
+  short_description: "Build tickets, review, and verify"
+  default_prompt: "Use $build to implement these tickets, review the complete diff, and verify the result."

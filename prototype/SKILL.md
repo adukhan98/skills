@@ -1,6 +1,6 @@
 ---
 name: prototype
-description: Build a disposable, runnable experiment that answers one design question. Use when the user needs to test a state model, business rule, data shape, interaction, or UI direction before committing to a specification or production implementation.
+description: Support shaping or specification with a disposable, runnable experiment that answers one design question. Use when a state model, business rule, data shape, interaction, or UI direction must be seen or run before the decision can be settled.
 ---
 
 # Prototype
@@ -19,6 +19,6 @@ A prototype answers one question. It is not a smaller production feature.
 6. Provide one command or URL to run it. Surface the relevant state or variant at all times.
 7. Run the minimum build, type, lint, and smoke checks needed to prove the experiment works. Add automated tests only when the test itself is the experiment's measurement.
 8. Record the verdict in `PROTOTYPE.md`: question, run command, evidence, observed result, chosen direction, rejected directions, reusable decisions, and cleanup status.
-9. Feed the decision into the active brief, map, or spec, then end prototype work. Return through `$flow` to `$spec` or `$build` for production implementation; do not promote the prototype wholesale.
+9. Feed the decision into the active brief, map, or spec, then return to the interrupted core phase. Do not jump past `$spec` or `$tickets`, and do not promote the prototype wholesale.
 
 Do not create a branch, commit, tracker issue, deployment, or production mutation unless the user explicitly requests it.

@@ -1,6 +1,6 @@
 ---
 name: handoff
-description: Capture active work in a concise, durable continuation document for another Codex task or agent. Use when work must pause, branch, move to a fresh context, transfer ownership, or preserve exact repository and verification state without duplicating existing artifacts.
+description: Support any workflow phase by capturing active work in a concise continuation document for another Codex task or agent. Use when work must pause, branch, move to a fresh context, transfer ownership, or preserve exact repository and verification state.
 ---
 
 # Handoff
