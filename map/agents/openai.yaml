@@ -1,4 +1,4 @@
 interface:
   display_name: "Map"
-  short_description: "Chart large uncertain work safely"
+  short_description: "Map unusually large product uncertainty"
   default_prompt: "Use $map to chart this large effort and identify the next decision."

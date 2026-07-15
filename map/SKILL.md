@@ -1,11 +1,11 @@
 ---
 name: map
-description: Chart a large, foggy effort as a dependency-aware decision map and advance its frontier. Use when the destination is known but the route spans multiple tasks, important questions cannot all be stated yet, or the user needs a durable map of research, prototype, and decision work before specification.
+description: Support shaping by charting an unusually large, foggy effort as a dependency-aware decision map. Use only when the destination is known but the unresolved route is too large for one focused interview or important questions cannot yet be stated precisely.
 ---
 
 # Map
 
-Map uncertainty, not implementation. A map is unnecessary when the route is already clear enough for a spec or one build task.
+Map uncertainty, not implementation. A map is unnecessary when the route is already clear enough for one shaping pass.
 
 ## Artifact
 
@@ -18,7 +18,7 @@ Use the project's existing planning convention. Otherwise create `docs/maps/<slu
 - **Blocked** - precise questions waiting on named decisions.
 - **Fog** - in-scope areas that cannot yet be phrased as precise questions.
 - **Artifacts** - linked research, prototypes, briefs, and handoffs.
-- **Next gate** - the condition for moving to `$spec` or `$build`.
+- **Next gate** - the condition for returning to `$shape` or moving to `$spec`.
 
 Give each question a type (`decision`, `research`, `prototype`, or `task`), status (`open`, `in-progress`, `awaiting-review`, `resolved`, or `out-of-scope`), blockers, evidence target, and resolution condition. Never put secrets in the map.
 

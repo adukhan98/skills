@@ -1,4 +1,4 @@
 interface:
   display_name: "Shape"
-  short_description: "Turn fuzzy ideas into clear decisions"
-  default_prompt: "Use $shape to stress-test this idea one decision at a time."
+  short_description: "Brainstorm and interview vague ideas"
+  default_prompt: "Use $shape to interview me one decision at a time and produce a confirmed brief."

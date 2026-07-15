@@ -1,16 +1,16 @@
 ---
 name: tickets
-description: Decompose a ready specification or settled plan into dependency-aware vertical delivery slices. Use when implementation spans multiple bounded tasks, needs a parallelizable frontier, requires tracker-ready issues, or must be split into fresh-context work without losing acceptance coverage.
+description: Turn a ready specification into one or more implementation tickets with acceptance criteria, verification, and true dependencies. Use after specification to create local files, GitHub issues, Linear issues, or tracker-ready work before building.
 ---
 
 # Tickets
 
-Create delivery tickets only after material product decisions are settled. Use `$map` for uncertainty and send a single coherent change directly to `$build`.
+This is the ticketing phase. Create delivery tickets only after material product decisions are settled. Even a small full-flow change gets one ticket.
 
 ## Procedure
 
 1. Read the authoritative spec or plan, its evidence, repository instructions, current architecture, and relevant ADRs.
-2. Give each numbered requirement at least one delivery owner. Separate requirements already delivered or explicitly out of scope.
+2. Give each numbered requirement and every applicable cross-cutting constraint at least one delivery owner. Separate requirements already delivered or explicitly out of scope.
 3. Slice the work into tracer bullets: each ticket delivers a narrow, complete, demonstrable behavior across every required layer and fits one bounded agent task.
 4. Add a preparatory refactor only when evidence shows it unblocks delivery. For a wide mechanical migration that cannot land as a vertical slice, use expand -> migrate in safe batches -> contract.
 5. Add only true blocking edges. Keep independent work unblocked; parallelize frontier tickets only when file ownership, state changes, and integration risk are disjoint.
@@ -52,13 +52,13 @@ Use this ticket contract:
 
 Before finishing, verify:
 
-- every in-scope requirement maps to at least one ticket;
+- every in-scope requirement and applicable cross-cutting constraint maps to at least one ticket;
 - no acceptance behavior is duplicated or orphaned;
 - every ticket is independently verifiable;
 - blockers are necessary and cycle-free;
 - at least one frontier ticket can start without inventing product behavior;
 - integration, migration, rollout, and cleanup work is owned where required.
 
-Create local tickets without an approval round when the user asked for decomposition. Publish to GitHub, Linear, or another external tracker only with explicit authorization; create blockers first so later relationships use real identifiers.
+Create local tickets without an approval round when the user asked for decomposition. If the user names GitHub, Linear, or another tracker, publish there with the available integration and preserve the same contract. External publication requires explicit authorization; create blockers first so later relationships use real identifiers.
 
 Use `$build` on one frontier ticket per agent task. Integrate and verify independent tickets before expanding the frontier. Update the ticket status and `INDEX.md` frontier after every completed or blocked build.

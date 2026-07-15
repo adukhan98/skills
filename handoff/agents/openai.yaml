@@ -1,4 +1,4 @@
 interface:
   display_name: "Handoff"
-  short_description: "Capture exact state for the next Codex task"
+  short_description: "Preserve state at any workflow phase"
   default_prompt: "Use $handoff to capture the current state for a fresh Codex task."
