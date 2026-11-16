@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tutor"
+  short_description: "Hints and questions, never the answer"
+  default_prompt: "Use $tutor to help me work through this without giving me the answer."

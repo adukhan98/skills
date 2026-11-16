@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clean Ending"
+  short_description: "End replies without offers to do more"
+  default_prompt: "Use $clean-ending for the rest of this conversation."

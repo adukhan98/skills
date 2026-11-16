@@ -5,7 +5,7 @@
 **A small skill library for turning vague ideas into reviewed, verified software.**
 
 <img alt="Codex ready" src="https://img.shields.io/badge/Codex-ready-111827?style=flat-square">
-<img alt="12 skills" src="https://img.shields.io/badge/skills-12-2563EB?style=flat-square">
+<img alt="21 skills" src="https://img.shields.io/badge/skills-21-2563EB?style=flat-square">
 <img alt="Local first" src="https://img.shields.io/badge/workflow-local--first-059669?style=flat-square">
 
 </div>
@@ -90,6 +90,47 @@ The workflow does not force busywork:
 | --- | --- |
 | [`goalstorm`](./goalstorm) | Turns a defined outcome into disjoint parallel-agent ownership, synthesis, and verification. |
 | [`copywriting`](./copywriting) | Writes and rewrites social, product, email, and repository copy in my voice. |
+
+## Everyday AI Skills
+
+Nine skills for anyone who uses an AI assistant. No coding needed. Each one fixes a habit that makes AI answers feel more reliable than they are.
+
+| Skill | Use it when | What it does |
+| --- | --- | --- |
+| [`clean-ending`](./clean-ending) | Every reply ends with "Want me to...?" | Ends the reply when the answer is done. No offers, teasers, or sign-offs. |
+| [`pushback`](./pushback) | The assistant agrees with everything you say | Argues against your idea first, then gives an honest verdict and the cheapest way to test it. |
+| [`source-check`](./source-check) | An answer has sources you have not clicked | Opens each source, quotes the exact line behind each claim, and flags what is not there. |
+| [`memory-audit`](./memory-audit) | You wonder what the assistant has saved about you | Lists what it can see about you, flags sensitive items, and says what to delete. |
+| [`fresh-start`](./fresh-start) | It keeps repeating a mistake you already corrected | Turns the stuck chat into one clean brief to paste into a new chat. |
+| [`confidence-check`](./confidence-check) | Every answer sounds equally certain | Labels claims sure, likely, or guess, and names what to verify first. |
+| [`sound-like-me`](./sound-like-me) | A draft sounds like AI wrote it | Learns your voice from a few samples and writes in it. |
+| [`interview-first`](./interview-first) | Answers come back generic | Asks a few sharp questions before starting, then uses your answers. |
+| [`tutor`](./tutor) | You want to learn it, not have it done | Gives hints and questions and leaves the answer to you. |
+
+These are plain `SKILL.md` folders, so they work in any assistant that supports skills.
+
+**Claude app.** Zip the folder for the skill you want, then upload the ZIP under Customize > Skills. Code execution must be turned on in settings.
+
+```bash
+zip -r pushback.zip pushback
+```
+
+**Claude Code or Codex.** Copy the folders into your skills directory:
+
+```bash
+DEST="$HOME/.claude/skills"   # Codex: "$HOME/.codex/skills"
+mkdir -p "$DEST"
+
+for skill in clean-ending pushback source-check memory-audit fresh-start confidence-check sound-like-me interview-first tutor; do
+  if [ -e "$DEST/$skill" ]; then
+    echo "skip existing: $skill"
+  else
+    cp -R "$skill" "$DEST/"
+  fi
+done
+```
+
+Then ask for one by name: "use the pushback skill on this plan".
 
 ## Install
 

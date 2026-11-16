@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sound Like Me"
+  short_description: "Learn my voice from samples and write in it"
+  default_prompt: "Use $sound-like-me to learn my voice from these samples and write this for me."

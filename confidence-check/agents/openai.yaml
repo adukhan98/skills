@@ -1,0 +1,4 @@
+interface:
+  display_name: "Confidence Check"
+  short_description: "Label claims sure, likely, or guess"
+  default_prompt: "Use $confidence-check and label how sure you are about each claim."

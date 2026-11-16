@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interview First"
+  short_description: "Ask sharp questions before starting"
+  default_prompt: "Use $interview-first and ask me what you need to know before you start."
