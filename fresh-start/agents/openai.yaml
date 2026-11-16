@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fresh Start"
+  short_description: "Turn a stuck chat into a clean brief"
+  default_prompt: "Use $fresh-start to write a clean brief I can paste into a new chat."

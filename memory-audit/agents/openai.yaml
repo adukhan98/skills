@@ -1,0 +1,4 @@
+interface:
+  display_name: "Memory Audit"
+  short_description: "List what the assistant knows about me"
+  default_prompt: "Use $memory-audit to show me everything you know about me and what to delete."

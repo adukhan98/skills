@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source Check"
+  short_description: "Quote the exact line behind each claim"
+  default_prompt: "Use $source-check to verify the claims and citations in this answer."
